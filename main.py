@@ -13,7 +13,6 @@ df = pd.DataFrame(
 st.sidebar.image('teste.png')
 st.markdown("# Aplicativo de visualização de Notas")
 st.markdown("-Aplicativo baseado em steamlit para analise rápida das notas de alunos")
-st.markdown("-Desenvolvido por: Mauricio A. Ribeiro e Rafaela Martins")
 st.sidebar.header('Avaliações')
 if st.sidebar.button("Nota 1"):
     st.header("Nota 1")
@@ -25,8 +24,6 @@ if st.sidebar.button("Nota 1"):
         st.metric(label="Média Plataformas", value=str(round(df['Plataforma 1'].mean(), 3)))
     with col3:
         st.metric(label="Numero de alunos ativos", value=str(round(df['Nota 1'].mean(), 3)))
-
-
 if st.sidebar.button("Nota 2"):
     st.header("Nota 2")
     st.bar_chart(df,y = ['Nota 2','Plataforma 2'])
@@ -37,8 +34,6 @@ if st.sidebar.button("Nota 2"):
         st.metric(label="Média Plataformas", value=str(round(df['Plataforma 2'].mean(), 2)))
     with col3:
         st.metric(label="Numero de alunos ativos", value=str(round(df['Nota 2'].mean(), 2)))
-
-
 if st.sidebar.button('Nota 3'):
     st.header("Nota 3")
     st.bar_chart(df,y = ['Nota 3','Plataforma 3'])
@@ -49,7 +44,6 @@ if st.sidebar.button('Nota 3'):
         st.metric(label="Média Plataformas", value=str(round(df['Plataforma 3'].mean(), 2)))
     with col3:
         st.metric(label="Numero de alunos ativos", value=str(round(df['Nota 3'].mean(), 2)))
-
 st.sidebar.subheader('Recuperações')
 if st.sidebar.button('Recuperação 1'):
     st.header("Recuperação 1")
@@ -79,3 +73,7 @@ st.sidebar.subheader('Média Final')
 if st.sidebar.button('Médias Finais'):
     st.header('Média Final')
     #st.line_chart(df['Recuperação 3'])
+st.sidebar.text("Desenvolvido por: Mauricio A. Ribeiro e Rafaela Martins")
+
+
+
